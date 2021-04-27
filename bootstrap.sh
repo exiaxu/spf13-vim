@@ -16,8 +16,8 @@
 
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
-[ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-3"
-[ -z "$REPO_URI" ] && REPO_URI='https://github.com/spf13/spf13-vim.git'
+[ -z "$APP_PATH" ] && APP_PATH="$HOME/spf13-vim"
+[ -z "$REPO_URI" ] && REPO_URI='https://github.com/exiaxu/spf13-vim'
 [ -z "$REPO_BRANCH" ] && REPO_BRANCH='3.0'
 debug_mode='0'
 fork_maintainer='0'
@@ -183,17 +183,17 @@ do_backup       "$HOME/.vim" \
                 "$HOME/.vimrc" \
                 "$HOME/.gvimrc"
 
-sync_repo       "$APP_PATH" \
-                "$REPO_URI" \
-                "$REPO_BRANCH" \
-                "$app_name"
+#sync_repo       "$APP_PATH" \
+                #"$REPO_URI" \
+                #"$REPO_BRANCH" \
+                #"$app_name"
 
 create_symlinks "$APP_PATH" \
                 "$HOME"
 
-setup_fork_mode "$fork_maintainer" \
-                "$APP_PATH" \
-                "$HOME"
+#setup_fork_mode "$fork_maintainer" \
+                #"$APP_PATH" \
+                #"$HOME"
 
 sync_repo       "$HOME/.vim/bundle/vundle" \
                 "$VUNDLE_URI" \
